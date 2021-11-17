@@ -1,0 +1,24 @@
+{
+  "name": "gov-uk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "govuk-frontend": "^3.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bens-playground/govfrontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bens-playground/govfrontend/issues"
+  },
+  "homepage": "https://github.com/bens-playground/govfrontend#readme"
+}
