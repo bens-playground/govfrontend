@@ -1,0 +1,22 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+          with:
+            python-version: '3.x'
+            architecture: 'x64'
+            cache: 'pip'
+      - run: pip install -r python/requirements.txt
+      - run: python python/publish.py
+      - run: git checkout -b gh-pages
+      - run: git config --global user.name "MoJ Github Action"
+      - run: git config --global user.email "platforms@digital.justice.gov.uk"
+      - run: git add *.html
+      - run: git commit -m "Publish latest changes"
+      - run: git push origin gh-pages --force
